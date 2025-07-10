@@ -6,6 +6,22 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^5.1.0"
-  }
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "mongo": "^0.1.0",
+    "mongodb": "^6.17.0"
+  },
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oniyemmy24/oniyemmy24-cse-314.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/oniyemmy24/oniyemmy24-cse-314/issues"
+  },
+  "homepage": "https://github.com/oniyemmy24/oniyemmy24-cse-314#readme"
 }
