@@ -1,111 +1,183 @@
 {
-  "openapi": "3.0.0",
+  "swagger": "2.0",
   "info": {
-    "title": "Contacts API",
+    "title": "Users Api",
     "version": "1.0.0",
-    "description": "API to manage contacts"
+    "description": ""
   },
-  "servers": [
-    {
-      "url": "https://your-render-url.onrender.com"
-    }
+  "host": "localhost:3002",
+  "basePath": "/",
+  "schemes": [
+    "https",
+    "http"
   ],
   "paths": {
-    "/contacts": {
+    "/": {
       "get": {
-        "summary": "Get all contacts",
+        "tags": [
+          "Hello World"
+        ],
+        "description": "",
         "responses": {
           "200": {
-            "description": "Successful response"
-          }
-        }
-      },
-      "post": {
-        "summary": "Create a contact",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Contact"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Contact created"
+            "description": "OK"
           }
         }
       }
     },
-    "/contacts/{id}": {
+    "/api-docs": {
       "get": {
-        "summary": "Get contact by ID",
-        "parameters": [{
-          "name": "id",
-          "in": "path",
-          "required": true,
-          "schema": { "type": "string" }
-        }],
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/users/": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
-            "description": "Successful response"
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "favoriteColor": {
+                  "example": "any"
+                },
+                "birthday": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       },
       "put": {
-        "summary": "Update a contact",
-        "parameters": [{
-          "name": "id",
-          "in": "path",
-          "required": true,
-          "schema": { "type": "string" }
-        }],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Contact"
+        "tags": [
+          "Users"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "birthday": {
+                  "example": "any"
+                }
               }
             }
           }
-        },
+        ],
         "responses": {
           "204": {
-            "description": "Contact updated"
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "delete": {
-        "summary": "Delete a contact",
-        "parameters": [{
-          "name": "id",
-          "in": "path",
-          "required": true,
-          "schema": { "type": "string" }
-        }],
+        "tags": [
+          "Users"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
         "responses": {
           "204": {
-            "description": "Contact deleted"
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
-      }
-    }
-  },
-  "components": {
-    "schemas": {
-      "Contact": {
-        "type": "object",
-        "properties": {
-          "firstName": { "type": "string" },
-          "lastName": { "type": "string" },
-          "email": { "type": "string" },
-          "favoriteColor": { "type": "string" },
-          "birthday": { "type": "string", "format": "date" }
-        },
-        "required": ["firstName", "lastName", "email", "favoriteColor", "birthday"]
       }
     }
   }
