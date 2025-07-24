@@ -5,14 +5,13 @@ const {MongoClient} = require('mongodb');
 let database;
 
 const initDb = async (callback) => {
-     const url = process.env.MONGODB_URL;
     if (database){
         console.log('Db is already initialized!');
         return callback(null, database);
     }
      try {
-    const client = await MongoClient.connect(url);
-    database = client.db(); // ✅ use client.db() not just client
+    const client = new MongoClient(process.env.MONGODB_URL);
+    database = client.db(process.env.project2); // ✅ use client.db() not just client
     console.log('✅ MongoDB connected successfully');
     callback(null, database);
   } 
