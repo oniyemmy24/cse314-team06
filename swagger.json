@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "description": ""
   },
-  "host": "localhost:3002",
+  "host": "cse314-7.onrender.com",
   "basePath": "/",
   "schemes": [
     "https",
@@ -21,16 +21,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
           }
         }
       }
@@ -82,8 +72,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "200": {
+            "description": "OK"
           },
           "500": {
             "description": "Internal Server Error"
@@ -141,6 +131,9 @@
                 "email": {
                   "example": "any"
                 },
+                "favoriteColor": {
+                  "example": "any"
+                },
                 "birthday": {
                   "example": "any"
                 }
@@ -149,8 +142,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "200": {
+            "description": "OK"
           },
           "500": {
             "description": "Internal Server Error"
@@ -171,8 +164,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "200": {
+            "description": "OK"
           },
           "500": {
             "description": "Internal Server Error"
