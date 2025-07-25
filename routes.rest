@@ -3,7 +3,7 @@ GET http://localhost:3002/users
 Accept: application/json
 
 ### Get a single user by ID
-GET http://localhost:3002/users/688290f2bbec21ec690da77e
+GET http://localhost:3002/users/6882d8d1f10dfec10072ba31
 Accept: application/json
 
 ### Create a new user
@@ -12,8 +12,8 @@ Content-Type: application/json
 
 {
   "firstName": "Samuel",
-  "lastName": "Smith",
-  "email": "jane@example.com",
+  "lastName": "Oni",
+  "email": "onisamuel@example.com",
   "favoriteColor": "Green",
   "birthday": "1995-05-15"
 }
@@ -24,12 +24,12 @@ Content-Type: application/json
 
 {
   "firstName": "Davis",
-  "lastName": "Sole",
+  "lastName": "Janet",
   "email": "jane@example.com",
-  "favoriteColor": "Green",
+  "favoriteColor": "Brown",
   "birthday": "1995-05-15"
 }
 
 ### Delete a user by ID
-DELETE http://localhost:3002/users/6882b6dd5fbf447051b94de0
+DELETE http://localhost:3002/users/6882d78089f7b5f37d7cb4af
 
