@@ -1,3 +1,66 @@
+### API Endpoints for Localhost:3000
+### test route endpoint
+GET http://localhost:3002/devices
+
+### test getAllDevices endpoint
+GET http://localhost:3002/devices
+Content-Type: application/json
+
+### test getSingleDevice endpoint
+GET http://localhost:3002/devices/689729c091e205d25221cebf
+
+### createDevice endpoint
+POST http://localhost:3002/devices
+Content-Type: application/json
+
+{
+ "name": "Sony WH-1000XM5",
+  "type": "Headphones",
+  "brand": "Sony",
+  "model": "WH1000XM5/B",
+  "specifications": {
+    "type": "Over-ear",
+    "connectivity": "Bluetooth 5.2",
+    "noiseCancellation": true,
+    "batteryLifeHours": 30,
+    "color": "Black"
+  },
+  "price": 349.99,
+  "releaseDate": "2022-05-12"
+}
+
+### test updateDevice endpoint 
+### remember to use the id of the device you want to update
+### and exist in the database
+PUT http://localhost:3002/devices/68972bd491e205d25221cec1
+Content-Type: application/json
+
+{
+  "name": "Updated Smartphone2",
+  "type": "smartphone",
+  "brand": "xiaomy",
+  "model": "Model X",
+  "specifications": {
+    "processor": "AMD Zen 2 (8 Cores)",
+    "gpu": "AMD RDNA 2",
+    "storageGB": 1024,
+    "color": "Black",
+    "features": [
+      "camera 50 MP",
+      "Tempest 3D Audio"
+    ]
+  },
+  "price": "600.99",
+  "releaseDate": "2024-11-12"
+}
+
+### test deleteDevice endpoint
+### remember to use the id of the device you want to delete
+### and exist in the database
+DELETE http://localhost:3002/devices/68972a9891e205d25221cec0
+
+
+
 ### Get all users
 GET http://localhost:3002/users
 Accept: application/json
@@ -11,7 +74,7 @@ POST http://localhost:3002/users
 Content-Type: application/json
 
 {
-  "firstName": "Samuel",
+  "firstName": "Amuel",
   "lastName": "Oni",
   "email": "onisamuel@example.com",
   "favoriteColor": "Green",
@@ -19,17 +82,82 @@ Content-Type: application/json
 }
 
 ### Update an existing user by ID
-PUT http://localhost:3002/users/6882b98de04f919991a5e499
+PUT http://localhost:3002/users/6882d8d1f10dfec10072ba31
 Content-Type: application/json
 
 {
   "firstName": "Davis",
   "lastName": "Janet",
   "email": "jane@example.com",
-  "favoriteColor": "Brown",
+  "favoriteColor": "Blue",
   "birthday": "1995-05-15"
 }
 
 ### Delete a user by ID
-DELETE http://localhost:3002/users/6882d78089f7b5f37d7cb4af
+DELETE http://localhost:3002/users/6882d8d1f10dfec10072ba31
+
+
+
+
+### API Endpoints for Render.com
+
+
+### test route endpoint
+GET https://cse341-team06.onrender.com
+
+### test getAllDevices endpoint
+GET https://cse341-team06.onrender.com
+
+### test getDeviceById endpoint
+GET https://cse341-team06.onrender.com
+
+### test createDevice endpoint
+POST https://cse341-team06.onrender.com/devices
+Content-Type: application/json
+
+{
+  "name": "New Smartphone",
+  "type": "smartphone",
+  "brand": "xiaomy",
+  "model": "Model X",
+  "specifications": {
+    "processor": "AMD Zen 2 (8 Cores)",
+    "gpu": "AMD RDNA 2",
+    "storageGB": 1024,
+    "color": "Black",
+    "features": [
+      "camera 50 MP",
+      "Tempest 3D Audio"
+    ]
+  },
+  "price": 600.99,
+  "releaseDate": "2024-11-12"
+}
+
+### test updateDevice endpoint
+PUT https://cse341-team06.onrender.com/devices
+Content-Type: application/json
+
+{
+  "name": "Updated Smartphone2",
+  "type": "smartphone",
+  "brand": "xiaomy",
+  "model": "Model X",
+  "specifications": {
+    "processor": "AMD Zen 2 (8 Cores)",
+    "gpu": "AMD RDNA 2",
+    "storageGB": 1024,
+    "color": "Black",
+    "features": [
+      "camera 50 MP",
+      "Tempest 3D Audio"
+    ]
+  },
+  "price": 600.99,
+  "releaseDate": "2024-11-12"
+}
+
+### test deleteDevice endpoint
+DELETE https://cse341-team06.onrender.com/devices
+
 
