@@ -4,9 +4,9 @@ const doc = {
     title: 'Users Api'
   },
   host: 'localhost:3002',
-  schemes: ['https', 'http']
+  schemes: ['http']
 };
 const outputFile = './swagger.json';
-const endpointsFiles= ['./server.js'];
+const endpointsFiles= ['./routes/index.js'];
 
 swaggerAutogen(outputFile, endpointsFiles, doc);
