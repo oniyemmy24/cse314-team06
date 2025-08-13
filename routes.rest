@@ -7,7 +7,7 @@ GET http://localhost:3002/devices
 Content-Type: application/json
 
 ### test getSingleDevice endpoint
-GET http://localhost:3002/devices/689729c091e205d25221cebf
+GET http://localhost:3002/devices/689a706c642fd314204c39cd
 
 ### createDevice endpoint
 POST http://localhost:3002/devices
