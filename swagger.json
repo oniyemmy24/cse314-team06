@@ -5,10 +5,9 @@
     "version": "1.0.0",
     "description": ""
   },
-  "host": "cse341-team06.onrender.com",
+  "host": "localhost:3002",
   "basePath": "/",
   "schemes": [
-      "https",
     "http"
   ],
   "paths": {

@@ -3,8 +3,8 @@ const doc = {
   info: {
     title: 'Users Api'
   },
-  host: 'cse341-team06.onrender.com',
-  schemes: ['https','http']
+  host: 'localhost:3002',
+  schemes: ['http']
 };
 const outputFile = './swagger.json';
 const endpointsFiles= ['./routes/index.js'];

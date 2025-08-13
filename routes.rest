@@ -103,16 +103,16 @@ DELETE http://localhost:3002/users/6882d8d1f10dfec10072ba31
 
 
 ### test route endpoint
-GET https://cse341-team06.onrender.com
+GET https://cse341-team06-7dti.onrender.com
 
 ### test getAllDevices endpoint
-GET https://cse341-team06.onrender.com
+GET https://cse341-team06-7dti.onrender.com/devices
 
 ### test getDeviceById endpoint
-GET https://cse341-team06.onrender.com
+GET https://cse341-team06-7dti.onrender.com
 
 ### test createDevice endpoint
-POST https://cse341-team06.onrender.com/devices
+POST https://cse341-team06-7dti.onrender.com/devices
 Content-Type: application/json
 
 {
@@ -135,7 +135,7 @@ Content-Type: application/json
 }
 
 ### test updateDevice endpoint
-PUT https://cse341-team06.onrender.com/devices
+PUT https://cse341-team06-7dti.onrender.com/devices
 Content-Type: application/json
 
 {
@@ -158,6 +158,6 @@ Content-Type: application/json
 }
 
 ### test deleteDevice endpoint
-DELETE https://cse341-team06.onrender.com/devices
+DELETE https://cse341-team06-7dti.onrender.com/devices
 
 
